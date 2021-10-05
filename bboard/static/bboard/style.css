@@ -1,0 +1,29 @@
+header h2 {
+	font-size: 50pt;
+	text-transform: uppercase;
+	text-align: center;
+	color:  green;
+	background: url("cover.jpg") left / auto 500% no-repeat;
+}
+
+nav {font-size: 25pt;
+	width: 150px;
+	float: left;
+}
+
+nav {
+	display: block;
+	margin: 10px 10px;
+	background: yellow;
+}
+
+section {
+	margin-left: 550px;
+	font-size: 20px;
+	padding: ;
+}
+
+.inad {
+	background: red;
+	text-transform: uppercase;
+}

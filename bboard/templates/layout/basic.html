@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>{% block title %} Главная {% endblock %}</title>
+		<link rel="icon" type="image/x-icon" href="https://sun9-34.userapi.com/impf/c837721/v837721178/6bb1a/3jXBly3Skv0.jpg?size=301x301&quality=96&sign=a2c06bdd6270d5ce3fd1923233f9dc5a&type=album">
+	</head>
+	<header>
+		<h2> Доска обьявлений </h2>
+	</header>
+	<hr>
+	<body>
+		<nav>
+			<a href="{% url 'index' %}">Главная</a>
+			{% for rubrik in rubriks %}
+			<a href="{% url 'by_rubrik' rubrik.pk %}">{{ rubrik.name }}</a>
+			{% endfor %}
+			<a href="{% url 'add' %}">Добавить </a>
+			<form action="/admin/" >
+				<input type="submit" value="Admin">
+			</form>
+		</nav>
+		<link rel="stylesheet" type="text/css" href="{% static 'bboard/style.css' %}">
+		<section>
+		{% block content %}
+		{% endblock %}
+		</section>
+	</body>
+</html> 

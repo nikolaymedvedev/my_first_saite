@@ -1,0 +1,11 @@
+{% extends "layout/basic.html" %}
+
+{% block content %}
+<div>
+	{% for i in bbs %}
+	<h3>{{ i.title }}</h3>
+	<p> {{ i.content }} </p>
+	<p> {{ i.published|date:"d.m.Y H:i:s" }} </p>		
+	{% endfor %}	
+</div>
+{% endblock %}
